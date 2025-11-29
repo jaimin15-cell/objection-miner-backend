@@ -36,7 +36,7 @@ app = FastAPI()
 # --- 3. SET THE "SERVING WINDOW" (CORS) ---
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],  # ONLY allow our React app
+    allow_origins=["*"],  # Allow Vercel and Localhost
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
